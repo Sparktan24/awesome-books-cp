@@ -27,13 +27,13 @@ Set it up localy.
 
 - GitHub: [@paulinagonzalezc](https://github.com/paulinagonzalezc)
 - Twitter: [@paulinagzzc](https://twitter.com/paulinagzzc)
-- LinkedIn: Paulina Gonzalez Cantu
+- LinkedIn: [Paulina Gonzalez Cantu]()
 
-👤 **Author2**
+👤 **Emmanuel Balikuddembe**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Balikuddembe](https://github.com/Balikuddembe)
+- Twitter: [@BalixEmma](https://twitter.com/BalixEmma)
+- LinkedIn: [Emmanuel Balikuddembe](https://www.linkedin.com/in/emmanuel-balikuddembe-763765b2/)
 
 ## 🤝 Contributing
 
