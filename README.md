@@ -35,6 +35,12 @@ Set it up localy.
 - Twitter: [@BalixEmma](https://twitter.com/BalixEmma)
 - LinkedIn: [Emmanuel Balikuddembe](https://www.linkedin.com/in/emmanuel-balikuddembe-763765b2/)
 
+👤 **Jesus Molina**
+
+- GitHub: [@Sparktan24](https://github.com/Sparktan24)
+- Twitter: [@Sparktan1](https://twitter.com/Sparktan1)
+- LinkedIn: [Jesus Molina](https://www.linkedin.com/in/jesus-molina-2b104424a/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
