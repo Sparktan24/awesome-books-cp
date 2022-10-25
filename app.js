@@ -67,7 +67,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const author = document.querySelector('#author').value;
 
   const book = new Book(title, author, id);
-  id++;
+  id += 1;
 
   UI.addBookList(book);
 
