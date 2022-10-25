@@ -13,13 +13,12 @@ class Store {
   }
 
   getBooks() {
-    let books;
     if (localStorage.getItem('books') === null) {
-      books = [];
+      this.books = [];
     } else {
-      books = JSON.parse(localStorage.getItem('books'));
+      this.books = JSON.parse(localStorage.getItem('books'));
     }
-    return books;
+    return this.books;
   }
 
   addBook(book) {
@@ -41,6 +40,10 @@ class Store {
     localStorage.setItem('books', JSON.stringify(filteredBooks));
   }
 }
+
+// Creating new Store
+const store = new Store();
+// console.log(store.count);
 
 class UI {
   static displayBooks() {
@@ -73,10 +76,6 @@ class UI {
     document.querySelector('#author').value = '';
   }
 }
-
-// Creating new Store
-const store = new Store();
-// console.log(store.count);
 
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
