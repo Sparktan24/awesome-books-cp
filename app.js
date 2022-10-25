@@ -1,14 +1,18 @@
 /* eslint-disable max-classes-per-file */
 class Book {
   constructor(title, author, id) {
+    this.id = id;
     this.title = title;
     this.author = author;
-    this.id = id;
   }
 }
 
 class Store {
-  static getBooks() {
+  constructor() {
+    this.count = this.getBooks().length + 1;
+  }
+
+  getBooks() {
     let books;
     if (localStorage.getItem('books') === null) {
       books = [];
@@ -18,16 +22,31 @@ class Store {
     return books;
   }
 
-  static addBook(book) {
-    const books = Store.getBooks();
-    books.push(book);
+  addBook(book) {
+    const newBook = {
+      id: this.count,
+      title: book.title,
+      author: book.author,
+    };
+
+    const books = this.getBooks();
+    books.push(newBook);
     localStorage.setItem('books', JSON.stringify(books));
+    this.count += 1;
+  }
+
+  removeBook(id) {
+    const books = this.getBooks();
+    const filteredBooks = books.filter((book) => {
+      return book.id !== id;
+    });
+    localStorage.setItem('books', JSON.stringify(filteredBooks));
   }
 }
 
 class UI {
   static displayBooks() {
-    const books = Store.getBooks();
+    const books = store.getBooks();
     books.forEach((book) => UI.addBookList(book));
   }
 
@@ -38,7 +57,7 @@ class UI {
     content.innerHTML = `
     <div>${book.title}</div>
     <div>${book.author}</div>
-    <button class="delete">Remove</button>
+    <button id="book-num-${book.id}"class="delete">Remove</button>
     <hr>
     `;
 
@@ -57,21 +76,24 @@ class UI {
   }
 }
 
+// Creating new Store
+const store = new Store();
+console.log(store.count);
+
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
-let id = 0;
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
+  const id = store.count;
 
   const book = new Book(title, author, id);
-  id++;
 
   UI.addBookList(book);
 
-  Store.addBook(book);
+  store.addBook(book);
 
   console.log(book);
 
@@ -80,4 +102,10 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 document.querySelector('#book-list').addEventListener('click', (e) => {
   UI.deleteBook(e.target);
+  const btnID = e.target.id;
+  const arrValues = btnID.split('-');
+  const idString = arrValues[arrValues.length - 1];
+  const id = parseInt(idString);
+  // Remove book from store
+  store.removeBook(id);
 });
