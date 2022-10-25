@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Awesome Books
 
 > In this project, we will build a basic website that allows users to add/remove books from a list.
 
