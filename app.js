@@ -1,8 +1,9 @@
 /* eslint-disable max-classes-per-file */
 class Book {
-  constructor(title, author) {
+  constructor(title, author, id) {
     this.title = title;
     this.author = author;
+    this.id = id;
   }
 }
 
@@ -58,17 +59,21 @@ class UI {
 
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
+let id = 0;
 document.querySelector('#book-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
 
-  const book = new Book(title, author);
+  const book = new Book(title, author, id);
+  id++;
 
   UI.addBookList(book);
 
   Store.addBook(book);
+
+  console.log(book);
 
   UI.clearFields();
 });
