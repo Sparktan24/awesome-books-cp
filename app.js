@@ -102,20 +102,29 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   store.removeBook(id);
 });
 
-const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ];
 
-n =  new Date();
-hours = n.getHours();
-minutes = n.getMinutes();
-seconds = n.getSeconds();
-y = n.getFullYear();
-//m = n.getMonth() + 1;
-//mo = n.
-d = n.getDate();
-m = monthNames[n.getMonth()]
-document.getElementById("date").innerHTML = m + " " + d + " " + y + ', ' +hours + ':' + minutes + ':' + seconds;
+const n = new Date();
+const hours = n.getHours();
+const minutes = n.getMinutes();
+const seconds = n.getSeconds();
+const y = n.getFullYear();
+const d = n.getDate();
+const m = monthNames[n.getMonth()];
+document.getElementById('date').innerHTML = `${m} ${d} ${y}, ${hours}:${minutes}:${seconds}`;
 
 const list = document.querySelector('#list');
 const addNew = document.querySelector('#add-new');
@@ -124,20 +133,18 @@ const tableContainer = document.querySelector('.books-table-container');
 const booksForm = document.querySelector('.book-form');
 const contactInfo = document.querySelector('.contact-info');
 
-list.addEventListener('click',()=>{
+list.addEventListener('click', () => {
   tableContainer.classList.remove('hide');
   booksForm.classList.add('hide');
   contactInfo.classList.add('hide');
 });
-addNew.addEventListener('click',()=>{
+addNew.addEventListener('click', () => {
   booksForm.classList.remove('hide');
   contactInfo.classList.add('hide');
   tableContainer.classList.add('hide');
 });
-contact.addEventListener('click',()=>{
+contact.addEventListener('click', () => {
   contactInfo.classList.remove('hide');
   booksForm.classList.add('hide');
   tableContainer.classList.add('hide');
-})
-
-
+});
