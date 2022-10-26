@@ -8,17 +8,37 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <h1>Awesome Books</h1>
-    <div class="book-list" id="book-list"></div>
-    <form id="book-form">
+    <div class="books-table-container">
+      <h1 class="main-title">All awesome books</h1>
+      <div class="book-list" id="book-list">
+        <div class="books-table"></div>
+      </div>
+    </div>
+
+    <div class="guide-bar"></div>
+
+    <form class="book-form" id="book-form">
+      <h1 class="add-book-title">Add a new book</h1>
       <div>
-        <input type="text" id="title" placeholder="Title" required />
+        <input
+          class="title-input"
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+        />
       </div>
       <div>
-        <input type="text" id="author" placeholder="Author" required />
+        <input
+          class="author-input"
+          type="text"
+          id="author"
+          placeholder="Author"
+          required
+        />
       </div>
 
-      <button type="submit">Add</button>
+      <button class="add-book-button" type="submit">Add</button>
     </form>
     <script src="app.js"></script>
   </body>
