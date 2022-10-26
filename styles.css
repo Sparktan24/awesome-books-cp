@@ -171,3 +171,17 @@ body {
 .contact-list li {
   padding-bottom: 4px;
 }
+
+.footer-container {
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  margin: 0 10px;
+}
+
+.footer {
+  margin: 0 50px;
+}
+
+.copyright {
+  padding: 10px;
+}
