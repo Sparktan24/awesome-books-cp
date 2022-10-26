@@ -56,7 +56,7 @@ class UI {
 
     const content = document.createElement('div');
     content.innerHTML = `
-    <div>${book.title} By ${book.author}</div>
+    <div>"${book.title}" By ${book.author}</div>
     <button id="book-num-${book.id}"class="delete">Remove</button>
     `;
     // <div>${book.author}</div>
