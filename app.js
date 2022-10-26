@@ -56,13 +56,12 @@ class UI {
 
     const content = document.createElement('div');
     content.innerHTML = `
-    <div>${book.title}</div>
-    <div>${book.author}</div>
+    <div>${book.title} By ${book.author}</div>
     <button id="book-num-${book.id}"class="delete">Remove</button>
-    <hr>
     `;
-
+    // <div>${book.author}</div>
     bookList.appendChild(content);
+    content.classList.add('book-row-content');
   }
 
   static deleteBook(element) {
