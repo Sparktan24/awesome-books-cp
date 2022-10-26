@@ -43,7 +43,6 @@ class Store {
 
 // Creating new Store
 const store = new Store();
-// console.log(store.count);
 
 class UI {
   static displayBooks() {
@@ -59,7 +58,7 @@ class UI {
     <div>"${book.title}" By ${book.author}</div>
     <button id="book-num-${book.id}"class="delete">Remove</button>
     `;
-    // <div>${book.author}</div>
+    
     bookList.appendChild(content);
     content.classList.add('book-row-content');
   }
@@ -90,8 +89,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   UI.addBookList(book);
 
   store.addBook(book);
-
-  // console.log(book);
 
   UI.clearFields();
 });
