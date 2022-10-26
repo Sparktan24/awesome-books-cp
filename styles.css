@@ -176,6 +176,10 @@ body {
   border: 1px solid black;
   box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
   margin: 0 10px;
+  position: fixed;
+  width: 95%;
+  bottom: 0;
+  margin-bottom: 20px;
 }
 
 .footer {
