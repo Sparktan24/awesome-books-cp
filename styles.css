@@ -185,3 +185,7 @@ body {
 .copyright {
   padding: 10px;
 }
+
+.hide {
+  display: none;
+}
