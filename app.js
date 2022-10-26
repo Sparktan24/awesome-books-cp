@@ -58,7 +58,6 @@ class UI {
     <div>"${book.title}" By ${book.author}</div>
     <button id="book-num-${book.id}"class="delete">Remove</button>
     `;
-    
     bookList.appendChild(content);
     content.classList.add('book-row-content');
   }
