@@ -5,6 +5,7 @@ body {
 
 .nav-bar-container {
   border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
   margin: 0 10px;
 }
 
@@ -24,19 +25,20 @@ body {
   margin: 0;
 }
 
+.main-logo a {
+  text-decoration: none;
+}
+
 .menus ul li a {
   color: black;
   text-decoration: none;
 }
-.vertical-line{
+
+.vertical-line {
   display: inline-block;
   border-left: 1px solid #ccc;
   margin: 0 10px;
   height: 20px;
-}
-
-.main-logo a {
-  text-decoration: none;
 }
 
 .main-logo a h3 {
@@ -87,13 +89,6 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
-.guide-bar {
-  width: 150px;
-  height: 15px;
-  border-bottom: 1px solid rgb(211, 209, 209);
-  margin: 0 auto 30px;
-}
-
 .book-form {
   display: flex;
   flex-direction: column;
@@ -139,4 +134,30 @@ body {
   cursor: pointer;
   position: relative;
   left: 180px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-title {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.info-description1 {
+  margin-bottom: 0;
+}
+
+.info-description2 {
+  margin-top: 5px;
+  position: relative;
+  right: 120px;
+}
+
+.contact-list li {
+  padding-bottom: 4px;
 }
