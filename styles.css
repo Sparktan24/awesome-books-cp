@@ -46,6 +46,16 @@ body {
   margin: 0;
 }
 
+.date-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.date-container p {
+  margin-right: 15px;
+}
+
 .books-table-container {
   display: flex;
   flex-direction: column;

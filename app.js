@@ -101,3 +101,18 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   // Remove book from store
   store.removeBook(id);
 });
+
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+n =  new Date();
+hours = n.getHours();
+minutes = n.getMinutes();
+seconds = n.getSeconds();
+y = n.getFullYear();
+//m = n.getMonth() + 1;
+//mo = n.
+d = n.getDate();
+m = monthNames[n.getMonth()]
+document.getElementById("date").innerHTML = m + " " + d + " " + y + ', ' +hours + ':' + minutes + ':' + seconds;
